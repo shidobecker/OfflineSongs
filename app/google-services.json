@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1053638407776",
+    "firebase_url": "https://offline-songs-8451a.firebaseio.com",
+    "project_id": "offline-songs-8451a",
+    "storage_bucket": "offline-songs-8451a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1053638407776:android:913df1357e5392b1",
+        "android_client_info": {
+          "package_name": "com.coderoom.offlinesongs"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1053638407776-o4ov94kpfbrt14ve3o18jjufj91uhpar.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.coderoom.offlinesongs",
+            "certificate_hash": "080242ff1f07afb8c21610608af84f0ca8394397"
+          }
+        },
+        {
+          "client_id": "1053638407776-ltbqlgc4tkn29b55pv5t2jvn13h3fcu1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBL4P44E68pxm2mdiMFqghvJZ43mutC0ns"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1053638407776-ltbqlgc4tkn29b55pv5t2jvn13h3fcu1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
