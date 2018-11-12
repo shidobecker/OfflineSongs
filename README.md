@@ -1,10 +1,20 @@
-### Propósito :
+### Intro:
+Offline apps works even when your net connection is lost and you can resume the app as if nothing ever happened. And there's huge benefits to this approach:
+Build an app that works offline allows your users to get an flexible experience and still keeps their data secure. 
+Your users will be able to use your app without any particular condition, except having it installed.
+Users from areas with poor or no internet connection at all (like rural areas or during a travel) can still use your app and enjoy it as much as a normal connection area user
+Users will see this as competitive advantage between you and your competitors
 
-O propósito desse artigo é criar uma aplicação Android cujo conceito de "offline-first" esteja fortemente atrelado ao funcionamento do app.
-Para tal usaremos [Realm](https://realm.io/docs/java/latest/) como um banco local, que vem se mostrado uma das melhores escolhas para o desenvolvimento de aplicativos Android, e para a sincronização de dados usaremos a lib [Workmanager](https://developer.android.com/topic/libraries/architecture/workmanager/) junto com a [JobScheduler](https://github.com/evernote/android-job)
+
+### Purpose :
+This article purpose is to create an Android "offline-first" application that is heavily tied to it's behavior
+To achieve this result, we are going to need a help of some libraries, each one has a role in our flow
+[Realm](https://realm.io/docs/java/latest/) as one of the best local database we can get, specially if you are already a iOS developer 
+[Workmanager](https://developer.android.com/topic/libraries/architecture/workmanager/) together with [JobScheduler](https://github.com/evernote/android-job) to synchronize all our data with a backend server (which won't be covered in this article)
+
 
 ### Tema:
-O tema do aplicativo será um simples favoritador de músicas. Com uma tela para que o usuário pesquise músicas pelo Spotify, e trazendo o resultado, as músicas poderão ser favoritadas para serem visualizadas sem precisar de internet.
+Our app theme will be a simple music bookmark. User can type and save it's favorite artists and songs, all in a offline context and will be sent to the backend server by scheduling a task to do it so.
 
 ### Flow:
 Em nome da simplicidade, o aplicativo não terá nenhum tipo de login, apenas será criado um identificador para cada usuário para relacionar suas músicas salvas.
