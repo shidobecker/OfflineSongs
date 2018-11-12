@@ -1,10 +1,10 @@
 ### Intro:
 Offline apps works even when your net connection is lost and you can resume the app as if nothing ever happened. And there's huge benefits to this approach:
-Build an app that works offline allows your users to get an flexible experience and still keeps their data secure. 
-Your users will be able to use your app without any particular condition, except having it installed.
-Users from areas with poor or no internet connection at all (like rural areas or during a travel) can still use your app and enjoy it as much as a normal connection area user
-Users will see this as competitive advantage between you and your competitors
-
+ - Build an app that works offline allows your users to get an flexible experience and still keeps their data secure. 
+ - Your users will be able to use your app without any particular condition, except having it installed.
+ - Users from areas with poor or no internet connection at all (like rural areas or during a travel) can still use your app and enjoy it as much as a normal connection area user
+ - Users will see this as competitive advantage between you and your competitors
+ - Quicker loading times
 
 ### Purpose :
 This article purpose is to create an Android "offline-first" application that is heavily tied to it's behavior
