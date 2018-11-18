@@ -21,6 +21,10 @@ android {
 
 
         buildConfigField "int", "REALM_SCHEMA_VERSION", "46"
+
+        //You can create this fields on each flavor or buildTypes to change values between production and debug versions
+        buildConfigField "long", "JOB_PERIODIC_INTERVAL", "15"
+        buildConfigField "long", "JOB_FLEX_INTERVAL", "5"
     }
     buildTypes {
         release {
@@ -73,6 +77,8 @@ dependencies {
     implementation 'com.google.firebase:firebase-core:16.0.1'
 
 
+    //Utils
+    implementation 'com.blankj:utilcode:1.7.1'
 
     apply plugin: 'com.google.gms.google-services'
 

@@ -7,5 +7,6 @@ open class Song(
         @PrimaryKey
         var id: String,
         var name: String,
-        var artistId: String
+        var artistId: String,
+        var synchedWithServer: Boolean
 ) : RealmObject()
