@@ -25,8 +25,6 @@ First of all let's create our Realm Model
 
         var name: String = "",
 
-        var songs: RealmList<Song> = RealmList(),
-
         var synchedWithServer: Boolean = false
 ) : RealmObject()
 ```
