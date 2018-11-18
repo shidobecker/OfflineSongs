@@ -2,6 +2,7 @@ package com.coderoom.offlinesongs.app
 
 import android.content.Context
 import androidx.multidex.MultiDexApplication
+import com.blankj.utilcode.util.Utils
 import com.coderoom.offlinesongs.BuildConfig
 import com.coderoom.offlinesongs.schedule.ArtistJobCreator
 import com.evernote.android.job.JobManager
@@ -15,6 +16,7 @@ class SongsApp : MultiDexApplication() {
     override fun onCreate() {
         super.onCreate()
 
+        Utils.init(this)
         Realm.init(this)
 
         appContext = applicationContext
