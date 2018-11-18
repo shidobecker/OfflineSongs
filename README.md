@@ -210,5 +210,35 @@ class SongsApp : Application() {
 
 ```
 
+We also need to schedule ArtistJob in any point in our app. I like to do it as soon as it starts, in case, in `MainActivityViewModel`
+```
+class MainActivityViewModel : ViewModel() {
+
+    init {
+        scheduleJob()
+    }
+
+    private fun scheduleJob() {
+        if (JobManager.instance().getAllJobRequestsForTag(ArtistsJob.TAG).isEmpty())
+            ArtistsJob.scheduleJob()
+    }
+
+}
+```
+
+If everything works, you'll be able to see some nice logs like these:
+
+``` 
+Executing request{id=1, tag=ARTIST_JOB, transient=false}, context PlatformJobService
+Finished job{id=1, finished=true, result=SUCCESS, canceled=false, periodic=true, class=ArtistsJob, tag=ARTIST_JOB}
+
+Worker result SUCCESS for Work [ id=da627d9e-c00e-42d8-b330-19dacc147bbc, tags={ com.coderoom.offlinesongs.synchronization.ArtistsWorker } ] 
+```
+The first two messages are from JobScheduler, showing the result of our Job alongside with ARTIST_TAG what we used before  
+The last one is from WorkManager showing it's result
+
+I won't go into details of how to build the UI to save our data into Realm, you can do it as you please.  
+Here you can find an example repository on how I did it https://github.com/shidobecker/OfflineSong
+
 
 
