@@ -7,13 +7,13 @@ Offline apps works even when your net connection is lost and you can resume the 
  - Quicker loading times
 
 ### Purpose :
-This article purpose is to create an Android "offline-first" application that is heavily tied to it's behavior
+This article's purpose is to create an Android "offline-first" application that is heavily tied to it's behavior
 To achieve this result, we are going to need a help of some libraries, each one has a role in our flow
 [Realm](https://realm.io/docs/java/latest/) as one of the best local database we can get, specially if you are already a iOS developer 
 [Workmanager](https://developer.android.com/topic/libraries/architecture/workmanager/) together with [JobScheduler](https://github.com/evernote/android-job) to synchronize all our data with a backend server (which won't be covered in this article)
 
 
-### Tema:
+### App Theme:
 Our app theme will be a simple music bookmark. User can type and save it's favorite artists and songs, all in a offline context and will be sent to the backend server by scheduling a task to do it so.
 
 ### Flow:
