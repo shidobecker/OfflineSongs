@@ -5,15 +5,15 @@ import androidx.work.OneTimeWorkRequest
 import androidx.work.WorkManager
 import com.blankj.utilcode.util.NetworkUtils
 import com.coderoom.offlinesongs.BuildConfig
-import com.coderoom.offlinesongs.synchronization.BookmarkWorker
+import com.coderoom.offlinesongs.synchronization.ArtistsWorker
 import com.evernote.android.job.Job
 import com.evernote.android.job.JobRequest
 import java.util.concurrent.TimeUnit
 
-class BookmarkJob : Job() {
+class ArtistsJob : Job() {
 
     companion object {
-        const val TAG: String = "BOOKMARK_JOB"
+        const val TAG: String = "ARTIST_JOB"
 
         fun scheduleJob() {
 
@@ -38,10 +38,10 @@ class BookmarkJob : Job() {
         return if (NetworkUtils.isConnected()) {
 
             val workManager: WorkManager = WorkManager.getInstance()
-            val bookMarkWorker = OneTimeWorkRequest.Builder(BookmarkWorker::class.java)
+            val bookMarkWorker = OneTimeWorkRequest.Builder(ArtistsWorker::class.java)
                     .build()
 
-            val continuation = workManager.beginUniqueWork(BookmarkJob.TAG,
+            val continuation = workManager.beginUniqueWork(ArtistsJob.TAG,
                     ExistingWorkPolicy.REPLACE,
                     bookMarkWorker)
             /**

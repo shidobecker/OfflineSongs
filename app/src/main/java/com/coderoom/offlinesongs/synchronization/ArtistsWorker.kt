@@ -5,7 +5,7 @@ import com.coderoom.offlinesongs.app.SongsApp
 import com.coderoom.offlinesongs.repository.ArtistRealm
 import com.coderoom.offlinesongs.utils.NotificationCreator
 
-class BookmarkWorker: Worker() {
+class ArtistsWorker: Worker() {
 
     override fun doWork(): Result {
         //We are going to try sending our bookmarked artists to our backend server here

@@ -1,14 +1,14 @@
 package com.coderoom.offlinesongs.app
 
-import android.app.Application
 import android.content.Context
+import androidx.multidex.MultiDexApplication
 import com.coderoom.offlinesongs.BuildConfig
-import com.coderoom.offlinesongs.schedule.SongsJobCreator
+import com.coderoom.offlinesongs.schedule.ArtistJobCreator
 import com.evernote.android.job.JobManager
 import io.realm.Realm
 import io.realm.RealmConfiguration
 
-class SongsApp : Application() {
+class SongsApp : MultiDexApplication() {
 
     private var realmConfiguration: RealmConfiguration? = null
 
@@ -28,7 +28,7 @@ class SongsApp : Application() {
         Realm.setDefaultConfiguration(realmConfiguration!!)
 
         //Initializing our JobCreator
-        JobManager.create(this).addJobCreator(SongsJobCreator())
+        JobManager.create(this).addJobCreator(ArtistJobCreator())
     }
 
     companion object {
