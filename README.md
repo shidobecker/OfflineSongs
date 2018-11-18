@@ -191,7 +191,7 @@ class SongsApp : Application() {
 
     override fun onCreate() {
         super.onCreate()
-
+        Utils.init(this)
         Realm.init(this)
 
         appContext = applicationContext
